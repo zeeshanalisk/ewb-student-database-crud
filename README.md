@@ -32,7 +32,7 @@ A REST API for managing student records, built with **Python**, **FastAPI** and 
 
 ### 1. Download and extract the project
 
-Extract the ZIP file, then open a terminal in the `ewb_student_crud` project directory—the directory containing `requirements.txt`.
+Extract the ZIP file, then open a terminal in the `ewb-student-database-crud` project directory—the directory containing `requirements.txt`.
 
 ### 2. Create and activate a virtual environment
 
