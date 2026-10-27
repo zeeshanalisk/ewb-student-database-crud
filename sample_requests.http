@@ -1,0 +1,56 @@
+### Welcome
+GET http://127.0.0.1:8000/
+
+### Health check
+GET http://127.0.0.1:8000/health
+
+### Create a student
+POST http://127.0.0.1:8000/students
+Content-Type: application/json
+
+{
+  "name": "Aarav Sharma",
+  "date_of_birth": "2005-06-15",
+  "email": "aarav@example.com",
+  "phone": "9876543210",
+  "course": "BCA",
+  "address": "Kolkata, West Bengal",
+  "enrollment_date": "2024-08-01"
+}
+
+### List all students
+GET http://127.0.0.1:8000/students
+
+### Filter by name or course
+GET http://127.0.0.1:8000/students?name=Aarav&course=BCA
+
+### Filter by date of birth
+GET http://127.0.0.1:8000/students?born_after=2005-01-01
+
+### Get student with ID 1
+GET http://127.0.0.1:8000/students/1
+
+### Replace all editable fields for student 1
+PUT http://127.0.0.1:8000/students/1
+Content-Type: application/json
+
+{
+  "name": "Aarav Sharma",
+  "date_of_birth": "2005-06-15",
+  "email": "aarav@example.com",
+  "phone": "9876543210",
+  "course": "BCA (Honours)",
+  "address": "Kolkata, West Bengal",
+  "enrollment_date": "2024-08-01"
+}
+
+### Partially update student 1
+PATCH http://127.0.0.1:8000/students/1
+Content-Type: application/json
+
+{
+  "course": "BCA (Honours)"
+}
+
+### Delete student 1
+DELETE http://127.0.0.1:8000/students/1
